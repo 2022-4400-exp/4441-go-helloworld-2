@@ -17,18 +17,3 @@ spec:
       containers:
       - image: ghcr.io/2022-4400-exp/4441-go-helloworld-2:33cc6e3787bec4bacfef99a853bf62a6f34e005a@sha256:c947d4e12e6a06d9ab22b8c9e0f8b071ea5c3dcca0a10e79ea79f3ef9a58366b
         name: go-helloworld-2
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: go-helloworld-2
-  name: go-helloworld-2
-spec:
-  ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app: go-helloworld-2
-  type: NodePort
