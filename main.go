@@ -16,7 +16,7 @@ func main() {
 
 func Hello() echo.HandlerFunc {
     return func(c echo.Context) error {     
-        return c.String(http.StatusOK, "4441: おでんは大根やん")
+        return c.String(http.StatusOK, "4441: おでんは大根がいい")
     }
 }
 
